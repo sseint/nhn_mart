@@ -3,8 +3,13 @@ package com.nhnacademy.mart;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 public class Customer {
+
+    private static final Logger logger = LoggerFactory.getLogger(Customer.class);
 
     // 고객 구매 목록
     private final BuyList buyList;
@@ -55,6 +60,7 @@ public class Customer {
 
                     }
                     if (!exist) {
+                        logger.warn("존재하지 않는 상품 입력");
                         throw new IllegalArgumentException("해당 상품은 존재하지 않습니다.");
                 }
             }

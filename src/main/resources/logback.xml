@@ -15,9 +15,7 @@
     </appender>
 
     <!-- debug 레벨 설정 -->
-    <!-- error > warn > info > debug > trace -->
-    <!-- <root level="debug">    root level에 설정한 로그부터 myApp.log에 찍힘 -->
-    <root level="trace">
+    <root level="debug">
         <appender-ref ref="FILE"/>
         <appender-ref ref="STDOUT"/>
     </root>

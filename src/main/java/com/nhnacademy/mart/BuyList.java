@@ -2,9 +2,12 @@ package com.nhnacademy.mart;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class BuyList {
 
+    private static final Logger logger = LoggerFactory.getLogger(BuyList.class);
     private static final ArrayList<Item> items = new ArrayList<>();
 
     // TODO add 메서드 생성
@@ -16,6 +19,7 @@ public class BuyList {
         String[] list = object.split(" ");
 
         if (object.isEmpty() || object.length() <= 0) {
+            logger.warn("0개 이상의 구매목록 작성 필요");
             throw new NullPointerException("값을 입력해주세요");
         }
 
