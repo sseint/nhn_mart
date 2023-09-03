@@ -18,4 +18,13 @@ class CounterTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> counter.pay(totalPrice, money));
     }
 
+    @Test
+    @DisplayName("카운터 작동 테스트")
+    void canCounterTest() {
+        Counter count = new Counter();
+        count.pay(10000, 12000);
+
+        Assertions.assertEquals(2000, count.getChanges());
+    }
+
 }

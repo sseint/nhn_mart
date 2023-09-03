@@ -8,6 +8,8 @@ public class Counter {
     private static ArrayList<Food> foods;
     private static final Logger logger = LoggerFactory.getLogger(Counter.class);
 
+    private static int changes;
+
     // TODO pay 메서드 구현 (카운터에서 계산 처리 메서드)
     public static void pay(int totalPrice, int money) {
         System.out.println("총 가격은 " + totalPrice + "원 입니다.");
@@ -17,6 +19,11 @@ public class Counter {
         } else {
             logger.info("결제 금액 : " + totalPrice + ", 보유 금액 : " + money + "결제 후 잔액 : " + (money - totalPrice));
             System.out.println("고객님 결제 후 잔액 : " + (money - totalPrice));
+            changes = (money - totalPrice);
         }
+    }
+
+    public static int getChanges() {
+        return changes;
     }
 }

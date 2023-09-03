@@ -80,6 +80,12 @@ public class Customer {
             }
         }
         counter.pay(totalPrice, money);
+
+        money = counter.getChanges();
+    }
+
+    public int getMoney() {
+        return money;
     }
 
 
