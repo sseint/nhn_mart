@@ -1,0 +1,17 @@
+₩Index: src/main/java/com/nhnacademy/mart/Customer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/nhnacademy/mart/Customer.java b/src/main/java/com/nhnacademy/mart/Customer.java
+--- a/src/main/java/com/nhnacademy/mart/Customer.java	
++++ b/src/main/java/com/nhnacademy/mart/Customer.java	(date 1693744914230)
+@@ -64,7 +64,7 @@
+ 
+     // TODO payTox 메서드 구현
+     public void payTox(Counter counter) {
+-        //카운터에서 계산한다. 
++        //카운터에서 계산한다.
+         //Jinyoung.payTox(mart.getCounter());
+         //getCounter는 return counter 하도록 만듦
+         int totalPrice = 0;
